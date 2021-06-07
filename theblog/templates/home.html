@@ -3,15 +3,21 @@
 <h1> Post</h1>
 <ul>
     {% for post in object_list %}
-    <li><a href="{% url 'article-detail' post.pk %}">{{ post.title }} </a>
-        {{ post.author.first_name }} {{ post.author.last_name }} - <a href="{% url 'update_post' post.pk %}"> Edit </a>
-        <a href="{% url 'delete_post' post.pk %}"> (Delete)
-        </a>
-        <br />
+    <li><a href="{% url 'article-detail' post.pk %}">{{ post.title }} </a> &nbsp; &nbsp;
+        {{ post.author.first_name }} {{ post.author.last_name }} - {{ post.post_date }}
+        <a href="{% url 'update_post' post.pk %}"> (Edit) </a> &nbsp; &nbsp;
+        <a href="{% url 'delete_post' post.pk %}"> (Delete)</a>
+        <br>
+
+
         <!-- {{ post.author }} <br> -->
         {{ post.body }}
+        <br>
+        <hr>
+        <br>
     </li>
     {% endfor %}
+
 
 </ul>
 
