@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %} pyarena | {{ post.title_tag }} {% endblock %}
+
+{% block content %}
+
+<h1>{{ post.title }}</h1>
+
+<small>By: {{ post.author }} {{ post.email }}</small>
+<hr>
+
+{{ post.body }}
+<br>
+<br>
+<a href="{% url 'home' %}" type="button" class="btn btn-secondary"> Back </a>
+
+<!-- <button type="button" class="btn btn-secondary">Secondary</button> -->
+{% endblock %}
