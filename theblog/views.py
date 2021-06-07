@@ -16,7 +16,7 @@ class HomeView(ListView):
 class ArticleDetailView(DetailView):
     model = Post
     template_name = 'article_details.html'
-    ordering = ['-id']
+    #ordering = ['-id']
 
 
 class AddPostView(CreateView):
